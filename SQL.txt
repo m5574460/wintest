@@ -1,0 +1,18 @@
+Q1:
+select FirstName, LastName, City, State
+from Person
+left join Address
+on Person.PersonId=Address.PersonId;
+
+Q2:
+SELECT c.Name AS Customers
+FROM customers AS c
+LEFT JOIN orders AS o
+ON c.id = o.customerid
+WHERE o.customerid IS NULL;
+
+Q3:
+SELECT DISTINCT p1.Email
+FROM Person p1, Person p2
+WHERE p1.Email = p2.Email and p1.id != p2.id
+;
